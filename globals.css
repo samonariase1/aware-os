@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 241, 245, 249; /* Pure Signal */
+  --background-start-rgb: 5, 5, 5; /* Deep Void */
+  --background-end-rgb: 18, 20, 24; /* Neural Gray/Surface */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  
+  /* Technical Sans-Serif Stack */
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* For horizontal scrollbars */
+}
+
+::-webkit-scrollbar-track {
+  background: #050505; /* Deep Void */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262a33; /* Slightly lighter than Surface for visibility */
+  border-radius: 4px;
+  border: 2px solid #050505; /* Creates padding effect */
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00E0FF; /* Oxygen Teal */
+}
+
+/* Optional: Selection Color */
+::selection {
+  background: #00E0FF; /* Oxygen Teal */
+  color: #050505; /* Deep Void */
+}
